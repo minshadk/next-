@@ -14,11 +14,11 @@ const Lists = ({ lists }) => {
     <div>
       <h1>All Lists</h1>
       {lists.map((list) => (
-        <div key={list.id}>
+        <Link href={"/lists/" + list.id} key={list.id}>
           <a className={styles.single}>
             <h3>{list.name}</h3>
           </a>
-        </div>
+        </Link>
       ))}
     </div>
   );
